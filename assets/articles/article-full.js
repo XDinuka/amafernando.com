@@ -10,7 +10,8 @@ class ArticleFull extends HTMLElement {
         shadow.appendChild(template);
 
         // References to the shadow DOM elements
-        this.titleElement = shadow.querySelector('.article-title');
+        this.titleElement = shadow.querySelector('.article-title i');
+        this.titleSpanElement = shadow.querySelector('.article-title span');
         this.dateElement = shadow.querySelector('.article-date');
         this.textElement = shadow.querySelector('.article-introduction');
         this.textText = shadow.querySelector('.article-text');
@@ -32,6 +33,7 @@ class ArticleFull extends HTMLElement {
     // Update the article content
     updateArticle(article) {
         this.titleElement.textContent = article.title;
+        this.titleSpanElement.textContent = article.articleId;
         this.dateElement.textContent = `Date: ${article.date}`;
         this.textElement.textContent = article.introduction;
         this.textText.innerHTML = article.text;
