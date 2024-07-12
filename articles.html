@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanda Fernando</title>
+    <link href="assets/bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+
+</head>
+<body class="bg-dark text-white base-bg d-flex flex-column min-vh-100">
+
+
+<main class="container-fluid flex-grow-1">
+
+
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 offset-sm-0 offset-md-3 offset-lg-4 text-center">
+            <div class="p-2 rounded-top-0 rounded-bottom-5 glass">
+
+                <h1><img src="images/image1.jpg" alt="Amanda Fernando" class="rounded-circle me-3"
+                         style="height: 5rem"/>Amanda
+                    Fernando</h1>
+                <p>
+                    Psychology(Hons)-USJP
+                    <br/>
+                    Psychology Lecturer | Student Success Coach | Motivational Speaker
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <nav class="mt-5">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-9 container-fluid text-center d-flex flex-column justify-content-evenly">
+
+                <div class="row gap-3">
+                    <a href="./" class="col">
+                        <span class="p-3 rounded-3 glass-1 ">About Amanda</span>
+                    </a>
+                    <a href="./coming-soon.html" class="col">
+                        <span class="p-3 rounded-3 glass-1">Sessions</span>
+                    </a>
+                    <a href="./articles.html" class="col">
+                        <span class="p-3 rounded-3 glass-1 bg-primary text-white">Articles</span>
+                    </a>
+                    <a href="./coming-soon.html" class="col">
+                        <span class="p-3 rounded-3 glass-1 ">Social Work</span>
+                    </a>
+                    <a href="https://www.researchgate.net/profile/Amanda-Fernando-6" target="_blank" class="col">
+                        <span class="p-3 rounded-3 glass-1 ">Researches</span>
+                    </a>
+                    <a href="./contact.html" class="col">
+                        <span class="p-3 rounded-3 glass-1 ">Contact Amanda</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <template id="article-tile-template">
+        <link href="assets/bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .article-container {
+                font-family: Arial, sans-serif;
+                border: 1px solid #ccc;
+                padding: 16px;
+                margin: 16px 0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(10px);
+                background-color: rgba(215, 225, 251, 0.62);
+                border-radius: 1rem;
+            }
+
+            .article-title {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+
+            * {
+                color: #1a1d20;
+                font-family: sans-serif;
+            }
+        </style>
+        <div class="article-container ">
+            <h2 class="article-title"></h2>
+            <span class="badge text-bg-secondary article-date"></span>
+            <div class="article-introduction"></div>
+            <div class="d-flex flex-row-reverse">
+                <a type="button" class="btn btn-link article-read-more">Read More</a>
+            </div>
+        </div>
+    </template>
+
+    <template id="article-full-template">
+        <link href="assets/bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            .article-container {
+                font-family: Arial, sans-serif;
+                border: 1px solid #ccc;
+                padding: 16px;
+                margin: 16px 0;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(10px);
+                background-color: rgba(255, 255, 255, 0.62);
+                border-radius: 1rem;
+            }
+
+            * {
+                color: #1a1d20;
+                font-family: sans-serif;
+            }
+        </style>
+        <div class="article-container">
+            <h1 class="article-title"></h1>
+            <span class="badge text-bg-secondary article-date"></span>
+            <p class="article-introduction"></p>
+            <div class="article-text"></div>
+        </div>
+    </template>
+
+    <section id="open-article" class="mt-5 container">
+
+    </section>
+
+    <section id="articles" class="mt-5 container">
+
+    </section>
+
+
+</main>
+
+<footer class="glass container-fluid  rounded-top-3">
+    <div class="container p-2 text-black">
+
+
+        <div class="glass p-2 d-inline-block rounded-3" style="height: 3rem">&copy; 2024 Amanda Fernando</div>
+        <div class="glass p-2 d-inline-block rounded-3"
+             style="height: 3rem; background-image: url('/images/mindsage.jpg'); background-position: left; background-repeat: no-repeat; background-size: contain">
+            <a href="https://www.facebook.com/profile.php?id=100090724481266" target="_blank">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mindsage With Ama
+            </a>
+        </div>
+        <div class="glass p-2 d-inline-block rounded-3"
+             style="height: 3rem; background-image: url('/images/blog.jpg'); background-position: left; background-repeat: no-repeat; background-size: contain">
+            <a href="https://www.facebook.com/profile.php?id=100090724481266" target="_blank">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Personal Blog
+            </a>
+        </div>
+
+    </div>
+</footer>
+<script src="/assets/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/articles/article-tile.js"></script>
+<script src="/assets/articles/article-full.js"></script>
+<script>
+    function fetchArticleIndex() {
+        return fetch("/data/article-index.json").then(resp => resp.json()).catch(() => []);
+    }
+
+    function fetchArticles() {
+        return fetch("/data/articles.json").then(resp => resp.json()).catch(() => ({}));
+    }
+
+    async function getOpenArticleId() {
+        const url = window.location.href;
+        const urlObj = new URL(url);
+        const params = new URLSearchParams(urlObj.search);
+        return params.get('articleId');
+    }
+
+    async function fillOpenArticle() {
+        const articleId = await getOpenArticleId();
+        const openArticle = document.getElementById("open-article")
+        let openArticleData = undefined;
+        if (articleId) {
+            const articles = await fetchArticles();
+            for (let articlesKey in articles) {
+                if (articlesKey === articleId) {
+                    openArticleData = articles[articlesKey];
+                    break;
+                }
+            }
+        }
+        if (openArticleData) {
+            let element = document.createElement(`article-full`);
+            element.setAttribute('data-article', JSON.stringify(openArticleData));
+            openArticle.appendChild(element);
+        } else {
+            openArticle.remove();
+        }
+
+
+    }
+
+    async function fillData() {
+        const articleId = await getOpenArticleId();
+        // const articleIndex = await fetchArticleIndex();
+        // const last5ArticleIndexes = articleIndex.slice(-5);
+        const articles = await fetchArticles();
+
+        const articlesSection = document.querySelector("#articles");
+        for (let articlesKey in articles) {
+            if (articlesKey === articleId) {
+                continue;
+            }
+            let article = articles[articlesKey];
+            let element = document.createElement(`article-tile`);
+            element.setAttribute('data-article', JSON.stringify(article));
+            articlesSection.appendChild(element);
+        }
+
+
+    }
+
+    fillOpenArticle();
+    fillData()
+</script>
+</body>
+</html>
