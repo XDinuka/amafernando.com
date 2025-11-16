@@ -4,34 +4,10 @@
 
 a {
     color: inherit;
-    text-decoration: inherit;
-}
-
-.glass {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-}
-
-.glass-1 {
-    background: linear-gradient(135deg, rgba(200, 200, 200, 0.4), rgba(200, 200, 200, 0.3));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-}
-
-.glass img {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-
+    text-decoration: none;
 }
 
 .base-bg {
-    /*background-image: url('/images/background1.png');*/
     /* background-position: center;*/
     /* background-repeat: no-repeat;*/
     /* background-size: cover;*/
