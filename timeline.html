@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGM5GP170R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PGM5GP170R');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Amanda Fernando - Timeline</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <style>
+        :root {
+            --bulma-primary: #197fe6;
+            --bulma-primary-h: 210deg;
+            --bulma-primary-s: 80%;
+            --bulma-primary-l: 50%;
+            --bulma-font-family-primary: "Inter", "Lexend", sans-serif;
+        }
+
+        [data-theme="light"] {
+            --bulma-background: #f6f7f8;
+            --bulma-text: #111418;
+        }
+
+        [data-theme="dark"] {
+            --bulma-background: #111921;
+            --bulma-text: #f6f7f8;
+        }
+
+        .navbar {
+            background-color: transparent !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--bulma-border);
+        }
+
+        .section {
+            padding: 3rem 1.5rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--bulma-border);
+            transform: translateX(-50%);
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+        }
+
+        .timeline-item {
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            top: 1.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: var(--bulma-primary);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline-marker {
+                left: 20px;
+            }
+        }
+
+        .timeline-content .box {
+            transition: transform 0.2s;
+        }
+
+        .timeline-content .box:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+
+    <link href="./assets/styles.css" rel="stylesheet" />
+</head>
+
+<body class="has-navbar-fixed-top">
+    <!-- Navbar -->
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container px-4">
+            <div class="navbar-brand">
+                <a class="navbar-item is-flex is-align-items-center" href="./">
+                    <img src="favicon.ico" alt="Amanda Fernando" class="is-rounded mr-3" style="max-height: 24px;">
+                    <span class="is-size-5 has-text-weight-bold">Amanda Fernando</span>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item is-active has-text-light" href="./timeline.html">Timeline</a>
+                    <a class="navbar-item" href="./publications.html">Publications</a>
+                    <a class="navbar-item" href="./contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container px-4">
+        <section class="section">
+            <h1 class="title is-1 has-text-weight-black mb-6">My Professional Journey</h1>
+
+<!--            <div class="timeline">-->
+<!--                &lt;!&ndash; Timeline Item 1 &ndash;&gt;-->
+<!--                <div class="timeline-item">-->
+<!--                    <div class="timeline-marker"></div>-->
+<!--                    <div class="columns is-gapless">-->
+<!--                        <div class="column is-5 timeline-content">-->
+<!--                            <div class="box">-->
+<!--                                <time class="is-size-7 has-text-weight-bold has-text-primary is-uppercase">May-->
+<!--                                    2012</time>-->
+<!--                                <h3 class="title is-4 mt-2">Graduated with PhD in Psychology</h3>-->
+<!--                                <figure class="image is-16by9 mb-4">-->
+<!--                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnuNpwWPiuFb1gEnYytPGFAR_lQ7becrdp1I8TGS7pdwMFVLV5Ce9NTkFmp37021DugEvmJqnfErneYvGJYE81Hh2n7TbxsVi_LyIyrYqL3pwpFkZzHHUhGfBD_gV5SM5BkBS57gQ82ODmE96zYnq0ryxt6WMFC9MLv6zZHQVeun1JHyoBZQL4tFf2zX7kb4atmrcWd5GcMVH5YPTpOkC6lKAqsJRfG26skJc0DkCFgiqKaq0-91KIMMDXfvr-u7Z-QzCOeGJ8yfg"-->
+<!--                                        alt="PhD Graduation" class="is-rounded-lg">-->
+<!--                                </figure>-->
+<!--                                <p class="is-size-6 has-text-grey">-->
+<!--                                    Completed my doctoral studies at Crestwood University, focusing on cognitive biases-->
+<!--                                    in decision-making. My dissertation was awarded the Dean's Prize for outstanding-->
+<!--                                    research.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="column is-2"></div>-->
+<!--                        <div class="column is-5"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Timeline Item 2 &ndash;&gt;-->
+<!--                <div class="timeline-item">-->
+<!--                    <div class="timeline-marker"></div>-->
+<!--                    <div class="columns is-gapless">-->
+<!--                        <div class="column is-5"></div>-->
+<!--                        <div class="column is-2"></div>-->
+<!--                        <div class="column is-5 timeline-content">-->
+<!--                            <div class="box">-->
+<!--                                <time class="is-size-7 has-text-weight-bold has-text-primary is-uppercase">March-->
+<!--                                    2014</time>-->
+<!--                                <h3 class="title is-4 mt-2">International Conference Presentation</h3>-->
+<!--                                <figure class="image is-16by9 mb-4">-->
+<!--                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM533eRlD1zyvyXZ62VIjvYY-rMlPpFcnZzbMtenFf6XDTrDwUly_srcUKUP3UfwvlLCRuRYTv4gjGzznaAT3GLUMWWhx2Mk0t5cthBL2jfUsDjDzVo4gsQWHbLN0eHkxCUGGLB4Ii3z4a754StIO4iSlFoyPEAGjTeEkuBO71qNea7L6TP8w57-23qp4hY0wLWAeTd4Jia9NIZ54ahbFs7bUoo56NJM0rr-go8O9T61Iyt_CxMU1ki0YHPvEop1MbTX-LWaRxKHI"-->
+<!--                                        alt="Conference Presentation" class="is-rounded-lg">-->
+<!--                                </figure>-->
+<!--                                <p class="is-size-6 has-text-grey">-->
+<!--                                    Presented my post-doctoral research at the International Congress of Psychology in-->
+<!--                                    Paris. A formative experience that connected me with peers from around the globe.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Timeline Item 3 &ndash;&gt;-->
+<!--                <div class="timeline-item">-->
+<!--                    <div class="timeline-marker"></div>-->
+<!--                    <div class="columns is-gapless">-->
+<!--                        <div class="column is-5 timeline-content">-->
+<!--                            <div class="box">-->
+<!--                                <time class="is-size-7 has-text-weight-bold has-text-primary is-uppercase">October-->
+<!--                                    2017</time>-->
+<!--                                <h3 class="title is-4 mt-2">Published Key Research Paper</h3>-->
+<!--                                <figure class="image is-16by9 mb-4">-->
+<!--                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOwAIZNzHIVlCWBZ9YWZSa5zar1etyj4ByE3SlWJaFnSFjgHGmjJWkVVtAyaIE48EK3uw9cBpfbBH3uHUQnxUVQqotmISrTJ54ewPbplo9AyTluE5uSy-K8fH5qvapReNfOHpsn4PjZsljB_WQCGW6uxy3K0mYI-k0mx8G-Z3KmcHHsKPIm1nmGg3Q6uFbU_iWKZs_nxG82ine4YH5gVhaQJ4Avks6nicmem4tsu_rNIGzMFve0e9gi2E8F7xW4p9JqPYr9q_sBYk"-->
+<!--                                        alt="Research Publication" class="is-rounded-lg">-->
+<!--                                </figure>-->
+<!--                                <p class="is-size-6 has-text-grey">-->
+<!--                                    My paper, "The Architecture of Belief," was published in the Journal of Experimental-->
+<!--                                    Psychology, becoming one of my most cited works.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="column is-2"></div>-->
+<!--                        <div class="column is-5"></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                &lt;!&ndash; Timeline Item 4 &ndash;&gt;-->
+<!--                <div class="timeline-item">-->
+<!--                    <div class="timeline-marker"></div>-->
+<!--                    <div class="columns is-gapless">-->
+<!--                        <div class="column is-5"></div>-->
+<!--                        <div class="column is-2"></div>-->
+<!--                        <div class="column is-5 timeline-content">-->
+<!--                            <div class="box">-->
+<!--                                <time class="is-size-7 has-text-weight-bold has-text-primary is-uppercase">June-->
+<!--                                    2019</time>-->
+<!--                                <h3 class="title is-4 mt-2">Excellence in Teaching Award</h3>-->
+<!--                                <figure class="image is-16by9 mb-4">-->
+<!--                                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb6gm09H4oWlSYvKZpmYeE3UxVQDlaFZ-Iyk5coNZBatDHw8uotUGFJ5a5jiADhoV-yO5WvQzef46We_RGefGJrxc2I5f7jdg2-jHO9r3XDjiiQqpwuBixuuV4q8gYWj4gnOLNCe5zyGoY6sX9Um3dD8Qo3FtgwFoChRFZEXD-mBzeB8ZJ_YP-1PXjLRDPj7t_65vYBSrEPoquNAxVAfsQeG110LvJkCKpFbS6ZVEUMPsmgzp8Ns1bFhuNxHxmch23kO93NSUIduI"-->
+<!--                                        alt="Teaching Award" class="is-rounded-lg">-->
+<!--                                </figure>-->
+<!--                                <p class="is-size-6 has-text-grey">-->
+<!--                                    Honored to receive the university-wide award for excellence in teaching, nominated-->
+<!--                                    by my students and peers. It was a proud moment in my academic career.-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </section>
+    </main>
+
+    <div class="fixed-bottom-right p-4">
+        <a class="button is-primary is-rounded is-large shadow" href="#">
+            <span class="icon">
+                <span class="material-symbols-outlined">arrow_upward</span>
+            </span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-6 py-6">
+        <div class="content has-text-centered">
+            <p class="has-text-grey">
+                © 2026 <strong>Amanda Fernando</strong>. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar Burger Toggle
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+
+            // Simple Dark Mode Support check
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        });
+    </script>
+</body>
+
+</html>

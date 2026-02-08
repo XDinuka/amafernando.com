@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGM5GP170R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PGM5GP170R');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Amanda Fernando - Publications</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <style>
+        :root {
+            --bulma-primary: #197fe6;
+            --bulma-primary-h: 210deg;
+            --bulma-primary-s: 80%;
+            --bulma-primary-l: 50%;
+            --bulma-font-family-primary: "Inter", "Lexend", sans-serif;
+        }
+
+        [data-theme="light"] {
+            --bulma-background: #f6f7f8;
+            --bulma-text: #111418;
+        }
+
+        [data-theme="dark"] {
+            --bulma-background: #111921;
+            --bulma-text: #f6f7f8;
+        }
+
+        .navbar {
+            background-color: transparent !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--bulma-border);
+        }
+
+        .section {
+            padding: 3rem 1.5rem;
+        }
+
+        .publication-card {
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+
+    <link href="./assets/styles.css" rel="stylesheet" />
+</head>
+
+<body class="has-navbar-fixed-top">
+    <!-- Navbar -->
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container px-4">
+            <div class="navbar-brand">
+                <a class="navbar-item is-flex is-align-items-center" href="./">
+                    <img src="favicon.ico" alt="Amanda Fernando" class="is-rounded mr-3" style="max-height: 24px;">
+                    <span class="is-size-5 has-text-weight-bold">Amanda Fernando</span>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="./timeline.html">Timeline</a>
+                    <a class="navbar-item is-active has-text-light" href="./publications.html">Publications</a>
+                    <a class="navbar-item" href="./contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container px-4">
+        <section class="section">
+            <div class="columns is-multiline">
+                <div class="column is-12">
+                    <h1 class="title is-1 has-text-weight-black">Publications</h1>
+                    <p class="subtitle is-5 has-text-grey max-width-2xl">
+                        A curated list of my peer-reviewed journal articles, book chapters, and conference papers. For
+                        inquiries or reprint requests, please feel free to contact me.
+                    </p>
+                </div>
+
+                <div class="column is-12 mt-4">
+                    <div class="field">
+                        <div class="control has-icons-left">
+                            <input class="input is-medium is-rounded" type="text" placeholder="Search publications..."
+                                id="searchPublicationsInput" onkeyup="searchPublications()"
+                                oninput="searchPublications()">
+                            <span class="icon is-left">
+                                <span class="material-symbols-outlined">search</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-12">
+                    <div id="publicationsList" class="py-4">
+                        <!-- Dynamic content -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-6 py-6">
+        <div class="content has-text-centered">
+            <p class="has-text-grey">
+                © 2026 <strong>Amanda Fernando</strong>. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar Burger Toggle
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+
+            // Simple Dark Mode Support check
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+
+            searchPublications();
+        });
+
+        const publications = [
+            {
+                title: 'A Study On The Impact Of Mechatronics (Electro-mechanical Sensor Machines) On The Social Behaviour Of Sri Lankan Young Adults (Colombo)',
+                authors: 'W. M. Amanda Fernando',
+                year: '2023',
+                journal: 'Vidyodaya Undergraduate Research Day',
+                link: 'https://www.researchgate.net/publication/375525381_A_Study_on_The_Impact_of_Mechatronics_Electro-Mechanical_Sensor_Machines_on_the_Social_Behaviour_of_Sri_Lankan_Young_Adults_Colombo',
+                citation: 'Fernando, W. M. A. (2023). A Study On The Impact Of Mechatronics (Electro-mechanical Sensor Machines) On The Social Behaviour Of Sri Lankan Young Adults (Colombo). Vidyodaya Undergraduate Research Day.',
+            }
+        ];
+
+        function searchPublications() {
+            const searchInput = document.querySelector('#searchPublicationsInput');
+            const keyword = searchInput.value.toLowerCase();
+            const list = document.querySelector('#publicationsList');
+
+            list.innerHTML = '';
+
+            const filtered = publications.filter(p =>
+                p.title.toLowerCase().includes(keyword) ||
+                p.journal.toLowerCase().includes(keyword) ||
+                p.authors.toLowerCase().includes(keyword)
+            );
+
+            if (filtered.length === 0) {
+                list.innerHTML = `
+                    <div class="has-text-centered py-6">
+                        <span class="material-symbols-outlined is-size-1 has-text-grey-light">search_off</span>
+                        <p class="is-size-5 has-text-grey mt-4">No publications found matching your search.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.map(createPublicationsElement).forEach(el => list.appendChild(el));
+        }
+
+        function createPublicationsElement({ title, authors, year, journal, link, citation }) {
+            const container = document.createElement("div");
+            container.className = "box publication-card";
+
+            const titlePara = document.createElement("p");
+            titlePara.className = "title is-5 mb-2";
+            titlePara.textContent = title;
+
+            const infoPara = document.createElement("p");
+            infoPara.className = "subtitle is-6 has-text-grey mb-4";
+
+            const authorsSpan = document.createElement("span");
+            authorsSpan.textContent = `${authors} (${year}). `;
+
+            const journalSpan = document.createElement("span");
+            journalSpan.className = "is-italic";
+            journalSpan.textContent = journal;
+
+            infoPara.append(authorsSpan, journalSpan);
+
+            const actions = document.createElement("div");
+            actions.className = "buttons";
+
+            const linkBtn = document.createElement("a");
+            linkBtn.className = "button is-primary is-small is-rounded";
+            linkBtn.href = link;
+            linkBtn.target = "_blank";
+            linkBtn.textContent = "Read More";
+
+            const quoteButton = document.createElement("button");
+            quoteButton.className = "button is-light is-small is-rounded";
+
+            const icon = document.createElement("span");
+            icon.className = "icon is-small";
+            icon.innerHTML = '<span class="material-symbols-outlined" style="font-size: 18px;">format_quote</span>';
+
+            quoteButton.onclick = () => {
+                navigator.clipboard.writeText(citation).then(() => {
+                    const originalText = quoteButton.innerHTML;
+                    quoteButton.textContent = "Copied!";
+                    setTimeout(() => { quoteButton.innerHTML = originalText; }, 2000);
+                });
+            };
+
+            quoteButton.appendChild(icon);
+
+            actions.append(linkBtn, quoteButton);
+            container.append(titlePara, infoPara, actions);
+
+            return container;
+        }
+    </script>
+</body>
+
+</html>
