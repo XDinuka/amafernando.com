@@ -1,106 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Amanda Fernando</title>
-    <link href="assets/bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/styles.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGM5GP170R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'G-PGM5GP170R');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Amanda Fernando - Lecturer in Psychology</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <style>
+        :root {
+            --bulma-primary: #197fe6;
+            --bulma-primary-h: 210deg;
+            --bulma-primary-s: 80%;
+            --bulma-primary-l: 50%;
+            --bulma-font-family-primary: "Inter", "Lexend", sans-serif;
+        }
+
+        [data-theme="light"] {
+            --bulma-background: #f6f7f8;
+            --bulma-text: #111418;
+        }
+
+        [data-theme="dark"] {
+            --bulma-background: #111921;
+            --bulma-text: #f6f7f8;
+        }
+
+        .hero-image {
+            width: 320px;
+            height: 320px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            margin: 0 auto;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            background-color: transparent !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--bulma-border);
+        }
+
+        .section {
+            padding: 3rem 1.5rem;
+        }
+    </style>
+
+    <link href="./assets/styles.css" rel="stylesheet" />
 </head>
-<body class="base-bg d-flex flex-column min-vh-100">
 
+<body class="has-navbar-fixed-top">
+    <!-- Navbar -->
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="container px-4">
+            <div class="navbar-brand">
+                <a class="navbar-item is-flex is-align-items-center" href="./">
+                    <img src="favicon.ico" alt="Amanda Fernando" class="is-rounded mr-3" style="max-height: 24px;">
+                    <span class="is-size-5 has-text-weight-bold">Amanda Fernando</span>
+                </a>
 
-<main class="container-fluid flex-grow-1">
-
-
-    <section class="row bg-secondary text-white">
-        <div class="col-sm-12 col-md-6 col-lg-4 offset-sm-0 offset-md-3 offset-lg-4 text-center pt-3">
-            <div class="p-2 rounded-top-0 rounded-bottom-5 ">
-                <img alt="Amanda Fernando" class="rounded-circle me-3" src="images/image1.jpg"
-                     style="height: 5rem"/>
-                <h1>
-                    Amanda Fernando</h1>
-                <p>
-                    Psychology Lecturer & Researcher
-                </p>
-
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
             </div>
-        </div>
-    </section>
 
-    <section class="d-grid justify-content-center mt-5 pt-5">
-        <div class="card">
-            <div class="card-header">
-                Education Background
-
-            </div>
-            <div class="card-body">
-
-                <ul>
-                    <li>MSc in Clinical and Counselling Psychology - Cambodia</li>
-                    <li>BA (Hons) Psychology (First Class) - USJP,Sri Lanka</li>
-                    <li>Higher Diploma of Counseling - UoC, Sri Lanka</li>
-                    <li>Drug Counseling Certificate Course - NDDCB, Sri Lanka</li>
-                </ul>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="p-2 text-center">
-
-        <a class="col" href="https://www.researchgate.net/profile/Amanda-Fernando-6" target="_blank">
-            <button class="btn btn-secondary rounded-2">Amanda's Research</button>
-        </a>
-    </section>
-
-
-    <section class="d-grid justify-content-center mt-5 pt-5">
-        <div class="card">
-            <div class="card-header">
-                Contact Information
-            </div>
-            <div class="card-body">
-                <p>If you'd like to get in touch, feel free to reach out via any of the methods below:</p>
-                <div>
-                    Email:
-                    <a href="mailto:amafernando15v@gmail.com">
-                        <button class="btn btn-link">amafernando15v@gmail.com</button>
-                    </a>
-                </div>
-                <div>
-                    LinkedIn:
-                    <a href="https://www.linkedin.com/in/amafernando/" target="_blank">
-                        <button class="btn btn-link">linkedin.com/in/amafernando</button>
-                    </a>
-                </div>
-                <div>
-                    Facebook:
-                    <a href="https://www.facebook.com/profile.php?id=100090724481266" target="_blank">
-                        <button class="btn btn-link">
-                            Mindsage With Ama
-                        </button>
-                    </a>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="./timeline.html">Timeline</a>
+                    <a class="navbar-item" href="./publications.html">Publications</a>
+                    <a class="navbar-item" href="./contact.html">Contact</a>
                 </div>
             </div>
-
-
         </div>
-    </section>
+    </nav>
 
+    <main class="container px-4">
+        <!-- Hero Section -->
+        <section class="section">
+            <div class="columns is-vcentered is-variable is-8 py-6">
+                <div class="column is-5">
+                    <div class="hero-image" style='background-image: url("images/image2.jpg");'></div>
+                </div>
+                <div class="column is-7">
+                    <div class="content">
+                        <h1 class="title is-1 has-text-weight-black">
+                            Amanda Fernando, Lecturer in Psychology
+                        </h1>
+                        <p class="subtitle is-size-5 has-text-grey">
+                            Hello, I’m Amanda, a lecturer in Psychology. My passion lies in exploring how the mind works
+                            and helping others understand the intricate ways in which human behavior, thought, and
+                            emotion intersect.
+                        </p>
+                        <div class="buttons">
+                            <a href="https://www.researchgate.net/profile/Amanda-Fernando-6" target="_blank"
+                                class="button is-primary is-medium is-rounded has-text-weight-bold">
+                                <span>Explore My Research</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</main>
+        <!-- Expertise Section -->
+        <section class="section border-top">
+            <h2 class="title is-4 mb-5">Areas of Expertise</h2>
+            <div class="tags are-medium">
+                <span class="tag is-primary is-light">Social Psychology</span>
+                <span class="tag is-primary is-light">Organizational Psychology</span>
+                <span class="tag is-primary is-light">Cognitive Psychology</span>
+                <span class="tag is-primary is-light">Abnormal Psychology</span>
+                <span class="tag is-primary is-light">Counselling Psychology</span>
+            </div>
+        </section>
+    </main>
 
-<footer class=" container-fluid rounded-top-3 text-center">
-    <div class="container p-2 text-black">
+    <!-- Footer -->
+    <footer class="footer mt-6 py-6">
+        <div class="content has-text-centered">
+            <p class="has-text-grey">
+                © 2026 <strong>Amanda Fernando</strong>. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar Burger Toggle
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
 
-        &copy; 2025 Amanda Fernando
-
-
-    </div>
-</footer>
-<script src="assets/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+            // Simple Dark Mode Support check (Bulma 1.0 style)
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        });
+    </script>
 </body>
+
 </html>
