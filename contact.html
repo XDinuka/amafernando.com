@@ -25,6 +25,7 @@
           rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
     <link rel="preconnect" href="https://challenges.cloudflare.com">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
     <style>
         :root {
@@ -64,32 +65,8 @@
 </head>
 
 <body class="has-navbar-fixed-top">
-<!-- Navbar -->
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="container px-4">
-        <div class="navbar-brand">
-            <a class="navbar-item is-flex is-align-items-center" href="./">
-                <img src="favicon.ico" alt="Amanda Fernando" class="is-rounded mr-3" style="max-height: 24px;">
-                <span class="is-size-5 has-text-weight-bold">Amanda Fernando</span>
-            </a>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <div id="navbarMenu" class="navbar-menu">
-            <div class="navbar-end">
-                <a class="navbar-item" href="./timeline.html">Timeline</a>
-                <a class="navbar-item" href="./publications.html">Publications</a>
-                <a class="navbar-item is-active has-text-light" href="./contact.html">Contact</a>
-            </div>
-        </div>
-    </div>
-</nav>
+<div id="navbar-root"></div>
+<script src="assets/navbar.js"></script>
 
 <main class="container px-4">
     <section class="section">
@@ -110,7 +87,8 @@
                             <h3 class="title is-4 mb-4">Contact Details</h3>
                             <div class="content">
                                 <a class="is-flex is-align-items-center p-3 has-text-grey-darker is-rounded hover-light"
-                                   href="mailto:ama@amafernando.com" style="border-radius: 8px;">
+                                   href="mailto:ama@amafernando.com" style="border-radius: 8px;"
+                                   aria-label="Send email to ama@amafernando.com">
                                         <span class="icon is-medium mr-3 has-text-primary">
                                             <span class="material-symbols-outlined">mail</span>
                                         </span>
@@ -123,7 +101,8 @@
 
                                 <a class="is-flex is-align-items-center p-3 has-text-grey-darker mt-2 is-rounded hover-light"
                                    href="https://www.linkedin.com/in/amafernando/" target="_blank"
-                                   style="border-radius: 8px;">
+                                   style="border-radius: 8px;"
+                                   aria-label="Visit Amanda Fernando's LinkedIn profile">
                                         <span class="icon is-medium mr-3 has-text-primary">
                                             <svg fill="currentColor" height="20" viewbox="0 0 16 16" width="20"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -149,14 +128,14 @@
                             <p class="subtitle is-6 has-text-grey mb-5">I will do my best to respond within 48
                                 business hours.</p>
 
-                            <form id="contact-form" onsubmit="interceptSubmit">
+                            <form id="contact-form">
                                 <div class="columns">
                                     <div class="column is-6">
                                         <div class="field">
                                             <label class="label" for="full-name">Full Name</label>
                                             <div class="control">
                                                 <input class="input" type="text" id="full-name" name="full-name"
-                                                       placeholder="Your Name" required>
+                                                       placeholder="Your Name" required aria-required="true">
                                             </div>
                                         </div>
                                     </div>
@@ -165,7 +144,7 @@
                                             <label class="label" for="email">Email Address</label>
                                             <div class="control">
                                                 <input class="input" type="email" id="email" name="email"
-                                                       placeholder="you@example.com" required>
+                                                       placeholder="you@example.com" required aria-required="true">
                                             </div>
                                         </div>
                                     </div>
@@ -175,7 +154,7 @@
                                     <label class="label" for="subject">Subject</label>
                                     <div class="control">
                                         <input class="input" type="text" id="subject" name="subject"
-                                               placeholder="Inquiry about..." required>
+                                               placeholder="Inquiry about..." required aria-required="true">
                                     </div>
                                 </div>
 
@@ -183,15 +162,16 @@
                                     <label class="label" for="message">Message</label>
                                     <div class="control">
                                             <textarea class="textarea" id="message" name="message"
-                                                      placeholder="Your message here..." rows="6" required></textarea>
+                                                      placeholder="Your message here..." rows="6" required aria-required="true"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="field">
                                     <div class="control">
                                         <div class="cf-turnstile" data-sitekey="0x4AAAAAACCiHcNkuoHoo_1I"
-                                             data-theme="light" data-size="normal"
-                                             data-callback="handleTurnstileResponse"></div>
+                                             data-theme="auto" data-size="normal"
+                                             data-callback="handleTurnstileResponse"
+                                             aria-label="Security verification"></div>
                                     </div>
                                 </div>
 
@@ -204,6 +184,7 @@
                                     </div>
                                 </div>
                             </form>
+                            <div id="form-message" hidden></div>
                         </div>
                     </div>
                 </div>
@@ -222,26 +203,6 @@
 </footer>
 
 <script src="assets/contact.js" defer></script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Navbar Burger Toggle
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-        if ($navbarBurgers.length > 0) {
-            $navbarBurgers.forEach(el => {
-                el.addEventListener('click', () => {
-                    const target = el.dataset.target;
-                    const $target = document.getElementById(target);
-                    el.classList.toggle('is-active');
-                    $target.classList.toggle('is-active');
-                });
-            });
-        }
-
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
-    });
-</script>
 </body>
 
 </html>
