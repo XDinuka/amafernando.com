@@ -1,3 +1,27 @@
 * {
     font-family: 'Lexend', sans-serif;
 }
+
+.hover-light:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .has-text-grey {
+    color: #a0a8b5 !important;
+}
+
+[data-theme="dark"] .has-text-grey-dark {
+    color: #c4cad4 !important;
+}
+
+[data-theme="dark"] .has-text-grey-darker {
+    color: #d0d5de !important;
+}
+
+[data-theme="dark"] .has-text-grey-light {
+    color: #7a8291 !important;
+}
+
+[data-theme="dark"] .hover-light:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}

@@ -1,6 +1,12 @@
 TODO add education
+- [done] BA (Hons) Psychology (First Class) - USJP, Sri Lanka
+- [done] Higher Diploma of Counseling - UoC, Sri Lanka
+- [done] Drug Counseling Certificate Course - NDDCB, Sri Lanka
+- [ ] MSc in Clinical and Counselling Psychology - Cambodia (add when ready)
 
-MSc in Clinical and Counselling Psychology - Cambodia
-BA (Hons) Psychology (First Class) - USJP,Sri Lanka
-Higher Diploma of Counseling - UoC, Sri Lanka
-Drug Counseling Certificate Course - NDDCB, Sri Lanka
+TODO timeline
+- timeline.html exists but nav link is hidden until content is ready
+- Add real professional milestones before re-adding Timeline to the navbar in navbar.js
+
+TODO publications
+- Add more publications to publications.html
